@@ -1,0 +1,213 @@
+//Font
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+//Color variables
+$Very-Dark-Magenta: hsl(300, 43%, 22%);
+$Soft-Pink: hsl(333, 80%, 67%);
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  min-height: 100vh;
+  width: 88%;
+  margin: auto;
+  margin-top: 4.9rem;
+  background-image: url("../images/bg-pattern-top-mobile.svg"),
+    url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left, bottom right;
+  @media only screen and (min-width: 1000px) {
+    width: 77%;
+    overflow: hidden;
+    margin-top: 0;
+    background-image: url("../images/bg-pattern-top-desktop.svg"),
+      url("../images/bg-pattern-bottom-desktop.svg");
+    background-size: 40%, 75%;
+    background-position: top left, bottom right;
+  }
+}
+
+.section__one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 75rem;
+  @media only screen and (min-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 7.8rem;
+    margin: auto;
+  }
+  .section__one__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    @media only screen and (min-width: 1000px) {
+      max-width: 28rem;
+      text-align: left;
+    }
+    h1 {
+      color: $Very-Dark-Magenta;
+      padding: 0 2.5rem;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      @media only screen and (min-width: 1000px) {
+        padding: 0;
+        font-size: 2.8rem;
+        margin-bottom: 0.7rem;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 1.6rem;
+      color: $Dark-Grayish-Magenta;
+    }
+  }
+  .section__one__ratings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media only screen and (min-width: 1000px) {
+      padding-top: 0.8rem;
+      width: 37.5vw;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0.5rem 0;
+      background-color: $Light-Grayish-Magenta;
+      border-radius: 0.5rem;
+      height: 4.7rem;
+      width: 100%;
+
+      @media only screen and (min-width: 1000px) {
+        max-width: 27.8rem;
+        height: 3.5rem;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      .stars {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img {
+          margin: 0 0.25rem;
+        }
+        @media only screen and (min-width: 1000px) {
+          margin-left: 1.8rem;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: $Very-Dark-Magenta;
+        @media only screen and (min-width: 1000px) {
+          margin-left: 1.8rem;
+        }
+      }
+    }
+    @media only screen and (min-width: 1000px) {
+      .rating:nth-child(1) {
+        align-self: flex-start;
+      }
+      .rating:nth-child(2) {
+        align-self: center;
+      }
+      .rating:nth-child(3) {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+.section__two {
+  margin-top: 2.5rem;
+  margin-bottom: 6rem;
+  max-width: 75rem;
+  @media only screen and (min-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 18.5vw;
+    margin-top: 2.6vw;
+  }
+  .section__two__figure__one,
+  .section__two__figure__two,
+  .section__two__figure__three {
+    background-color: $Very-Dark-Magenta;
+    padding: 2.5rem 1.9rem 2.1rem 2rem;
+    min-height: 8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    @media only screen and (min-width: 1000px) {
+      max-width: 21.8rem;
+      min-height: 14.5rem;
+      margin-bottom: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1.6rem;
+      img {
+        width: 2.5rem;
+        border-radius: 50%;
+      }
+      .buyer {
+        margin-left: 1.5rem;
+        h5 {
+          color: $White;
+          font-weight: 500;
+          font-size: 0.8rem;
+          margin-bottom: 0.4rem;
+        }
+        h6 {
+          color: $Soft-Pink;
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+    .review {
+      color: $White;
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .section__two__figure__one {
+    align-self: flex-start;
+  }
+  .section__two__figure__two {
+    align-self: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .section__two__figure__three {
+    align-self: flex-end;
+  }
+}
